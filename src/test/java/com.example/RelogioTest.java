@@ -4,10 +4,8 @@ import org.junit.Before;
 
 public class RelogioTest {
 
-    // Cria um objeto da classe Relogio para usar nos testes
     private Relogio relogio;
 
-    // Inicializa o objeto antes de cada teste
     @Before
     public void setUp() {
         relogio = new Relogio();
