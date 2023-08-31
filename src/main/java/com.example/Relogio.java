@@ -95,7 +95,7 @@ public class Relogio {
         }
     }
 
-    // Métodos getters para acessar os atributos privados da classe Relogio
+    // Métodos getters para acessar os atributos privados da classe Relogio.
     public int getHoras() {
         return horas;
     }
