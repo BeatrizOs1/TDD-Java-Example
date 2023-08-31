@@ -75,3 +75,48 @@ public class Relogio {
         return hora;
         
         }
+
+        // Método que atualiza o horário quando recebe indicação de passagem do tempo do Sistema Operacional
+     public void atualizar(int segundos) {
+        this.segundos += segundos;
+        if (this.segundos > 59) {
+            int minutosExtras = this.segundos / 60;
+            this.segundos = 0;
+            this.minutos += minutosExtras;
+        }
+        if (this.minutos > 59) {
+            int horasExtras = this.minutos / 60;
+            this.minutos = 0;
+            this.horas += horasExtras;
+        }
+        if (this.horas > 23) {
+            int diasExtras = this.horas / 24;
+            this.horas = 0;
+        }
+    }
+
+    // Métodos getters para acessar os atributos privados da classe Relogio
+    public int getHoras() {
+        return horas;
+    }
+
+    public int getMinutos() {
+        return minutos;
+    }
+
+    public int getSegundos() {
+        return segundos;
+    }
+
+    public boolean isCronometro() {
+        return cronometro;
+    }
+
+    public long getInicio() {
+        return inicio;
+    }
+
+    public long getFim() {
+        return fim;
+    }
+}
